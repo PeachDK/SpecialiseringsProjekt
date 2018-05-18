@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SpecialiseringsProjekt
+namespace SpecialiseringsProjekt.Repo
 {
-    class QR
+    class Visuals
     {
-
-
 
 
 

@@ -13,5 +13,25 @@ namespace SpecialiseringsProjekt
 		{
 			InitializeComponent();
 		}
-	}
+
+        string scanned;
+
+        private async void QR_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var scanner = DependencyService.Get<IQR>();
+                var result = await scanner.ScanAsync();
+                if (result != null)
+                {
+                    scanned = result;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+    }
 }

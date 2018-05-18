@@ -4,11 +4,12 @@
              xmlns:local="clr-namespace:SpecialiseringsProjekt"
              x:Class="SpecialiseringsProjekt.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout Padding="20" BackgroundColor="DarkGreen"> 
+
+        <Button Text="QR"></Button>
+        <Button></Button>
+
     </StackLayout>
+
 
 </ContentPage>

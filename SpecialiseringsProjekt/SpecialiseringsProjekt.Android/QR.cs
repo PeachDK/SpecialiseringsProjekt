@@ -21,16 +21,23 @@ namespace SpecialiseringsProjekt.Droid
     {
         public async Task<string> ScanAsync()
         {
-            var optionsDefault = new MobileBarcodeScanningOptions();
+            var optionsDefault = new MobileBarcodeScanningOptions()
+            {
+                AutoRotate = false,
+                TryHarder = true,
+                UseFrontCameraIfAvailable = false,
+
+            };
             var optionsCustom = new MobileBarcodeScanningOptions();
 
             var scanner = new MobileBarcodeScanner()
             {
                 TopText = "Scan the QR Code",
                 BottomText = "Please Wait",
+
             };
 
-            var scanResult = await scanner.Scan(optionsCustom);
+            var scanResult = await scanner.Scan(optionsDefault);
             return scanResult.Text;
         }
     }

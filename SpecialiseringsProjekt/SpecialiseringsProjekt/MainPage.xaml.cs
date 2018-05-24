@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using SpecialiseringsProjekt.Pages;
 
 namespace SpecialiseringsProjekt
 {
@@ -20,6 +21,7 @@ namespace SpecialiseringsProjekt
         {
             try
             {
+              
                 var scanner = DependencyService.Get<IQR>();
                 var result = await scanner.ScanAsync();
                 if (result != null)
@@ -29,9 +31,19 @@ namespace SpecialiseringsProjekt
             }
             catch (Exception ex)
             {
-
                 throw ex;
+                
             }
+        }
+
+        private void Forsoeg_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Forsoeg());
+        }
+
+        private void Produkt_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Produkt());
         }
     }
 }

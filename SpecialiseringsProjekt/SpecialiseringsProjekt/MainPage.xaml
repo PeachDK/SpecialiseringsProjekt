@@ -7,7 +7,8 @@
     <StackLayout Padding="20" BackgroundColor="DarkGreen"> 
 
         <Button x:Name="QR" Text="QR" Clicked="QR_Clicked" ></Button>
-        <Button Text="Visual"></Button>
+        <Button x:Name="Forsoeg" Text="Forsøgs Rapporter" Clicked="Forsoeg_Clicked"></Button>
+        <Button x:Name="Produkt" Text="Søg på Produkter" Clicked="Produkt_Clicked"></Button>
         
     </StackLayout>
 

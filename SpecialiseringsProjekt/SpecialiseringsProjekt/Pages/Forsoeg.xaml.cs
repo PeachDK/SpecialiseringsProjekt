@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SpecialiseringsProjekt.Dal;
 
 namespace SpecialiseringsProjekt.Pages
 {
@@ -15,6 +16,8 @@ namespace SpecialiseringsProjekt.Pages
 		public Forsoeg ()
 		{
 			InitializeComponent ();
+            listView.ItemsSource = Repo.StaticInstance.GetForsoeg();
+            
 		}
 	}
 }

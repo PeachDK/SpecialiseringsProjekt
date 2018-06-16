@@ -4,7 +4,7 @@
              x:Class="SpecialiseringsProjekt.Pages.Forsoeg">
     
     <ContentPage.Content>
-        <ListView x:Name="listView" HasUnevenRows="True">
+        <ListView x:Name="listView" HasUnevenRows="True" ItemSelected="OnItemSelectedAsync">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
